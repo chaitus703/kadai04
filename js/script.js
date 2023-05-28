@@ -30,6 +30,7 @@ const speech = new webkitSpeechRecognition();
 
       }
      }
+     
     //--------------------------------//
 
     var voices = [];
