@@ -6,8 +6,8 @@ const form = document.getElementById('form')
 const content = document.getElementById('content');
 const talks = JSON.parse(localStorage.getItem("talks"));
 const ul = document.getElementById("ul");
-const lists = document.querySelectorAll("li");
-const li = document.createElement("li");
+
+
 
 
 $("#btn").on('click', function() {
@@ -87,19 +87,20 @@ function add(talk){
     talktext = talk;
   }
   if(talktext.length > 0){
+    const li = document.createElement("li");
     li.innerText = talktext;
-    li.classList.add("#list-group-item");
+    li.classList.add("list-group-item");
     ul.appendChild(li);
     saveData();
   }
 }
 
 function saveData(){
+  const lists = document.querySelectorAll("li");
   let talks = [];
   lists.forEach(list=>{
     talks.push(list.innerText);
-  })
-  var localStorage = Storage;
+  });
   localStorage.setItem("talks", JSON.stringify(talks));
 }
 
