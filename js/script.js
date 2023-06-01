@@ -7,9 +7,6 @@ const content = document.getElementById('content');
 const talks = JSON.parse(localStorage.getItem("talks"));
 const ul = document.getElementById("ul");
 
-
-
-
 $("#btn").on('click', function() {
 // 音声認識をスタート
 speech.start();
@@ -25,7 +22,6 @@ speech.onresult = function(e) {
     content.innerHTML += autotext;
   }
   }
-
 //--------------------------------//
 
 var voices = [];
