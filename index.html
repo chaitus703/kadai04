@@ -10,18 +10,44 @@
 </head>
 <body>
     
-    <h2>音声認識サンプル</h2>
-    <input type="text" id="key" placeholder="何の話する？">
-    <button id="btn">start</button>
-    <div>
+    <button id="btn">話しかける</button>
+    <form id="form">
         <textarea id="content"></textarea>
-    </div>
-    <input type="button" id="speech_button" value="話す"> 	
+    </form>
+    <input type="button" id="speech_button" value="えさをあげる"> 
+    <button id="save">ストック</button>
+    <ul class="list-group" id="ul"></ul>
+
+    <!-- <ul>
+        <input type="text" id="key">
+        <li id="save">Save</li>
+        <li id="clear">Clear</li>
+    </ul>
+    <table id="list"> -->
+
+    </table>
+
+<!-- 
+    <div class="parent">
+        <form name="MusicForm">
+          <select name="music" class="select_music">
+            <option value="おやすみDay">おやすみDay</option>
+            <option value="ぴよぴよサーキット">ぴよぴよサーキット</option>
+            <option value="海底の神殿">海底の神殿</option>
+          </select>
+        </form>
+        <form name="timer" id="timerform">
+          <input type="text" value="" class="min"><span>分</span>
+          <input type="text" value="" class="sec"><span>秒</span><br>
+          <input type="button" value="スタート" onclick="CountStart()" class="button">
+          <input type="button" value="ストップ" onclick="CountStop()" class="button">
+        </form>
+      </div> -->
 
 
-    
-    
 
+
+   
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
