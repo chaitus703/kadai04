@@ -23,15 +23,6 @@ speech.onresult = function(e) {
     console.log(e);
     console.log(autotext);
     content.innerHTML += autotext;
-    // //入力された文字を取得したいと思います🤗
-    // const key = $("#key").val();
-    // // コンソールログを使ってkeyの中身をチェックしてみましょう🤗
-    // console.log(key, 'keyの中身')
-    // // textareaの入力箇所も取得しましょう🤗
-    // const value = $("#content").val();
-    // console.log(value, 'valueの中身')
-    // // ローカルストレージに保存する記述をします🤗
-    // localStorage.setItem(key, value)
   }
   }
 
@@ -95,8 +86,8 @@ function add(talk){
     li.classList.add("list-group-item");
     $(li).on("click", function() {
       if( confirm("削除しますか") ) {
-        li.remove();
-        saveData();
+        li.remove(); // コメントを削除
+        saveData(); // 削除した状態でローカルストレージに保存
       }
     })
     ul.appendChild(li);
@@ -104,7 +95,7 @@ function add(talk){
   }
 }
 
-function saveData(){
+function saveData(){  // ローカルストレージに保存
   const lists = document.querySelectorAll("li");
   let talks = [];
   lists.forEach(list=>{
@@ -113,34 +104,10 @@ function saveData(){
   localStorage.setItem("talks", JSON.stringify(talks));
 }
 
-// ローカルストレージに保存
-$("#save").on("click", function() {
-  saveData();
-})
-
 // ーーーーーーーーーーーーーーーーーーーーーーーーーー
 if(talks){
   talks.forEach(talk => {
     add(talk);
   })
 }
-
-// ローカルストレージから削除
-// $("#clear").on("click", function(){
-//   localStorage.removeItem("name"); 
-//   $("#list").empty();
-// })
-
-// ーーーーーーーーーーーーーーーーーーーーーーーーーー
-// for(let i = 0; i < localStorage.length; i++){
-//   const key = localStorage.key(i);
-//   const value = localStorage.getItem(key)
-//   const html = `
-//   <tr>
-//      <th>${key}</th>
-//      <td>${value}</td>
-//   </tr>
-//   `
-//   $("#list").append(html)
-//  }
 
