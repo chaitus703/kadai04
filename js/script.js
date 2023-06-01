@@ -90,6 +90,12 @@ function add(talk){
     const li = document.createElement("li");
     li.innerText = talktext;
     li.classList.add("list-group-item");
+    $(li).on("click", function() {
+      if( confirm("削除しますか") ) {
+        li.remove();
+        saveData();
+      }
+    })
     ul.appendChild(li);
     saveData();
   }
