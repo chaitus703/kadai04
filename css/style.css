@@ -123,7 +123,6 @@ li{
     list-style-type:none;
     border: 1px solid #666;
     background-color: #fff;
-    display:table-cell;  /* 定義 */
     cursor: pointer;
     color:#0d7dfd;
 }

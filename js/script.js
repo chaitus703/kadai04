@@ -75,10 +75,13 @@ function speech1(){
   // お話しする
   window.speechSynthesis.speak(uttr);
 }
+
+
 window.addEventListener("load",function(){
   //ボタンを押すと「speech」関数を呼び出す
   document.getElementById("speech_button").addEventListener("click",speech1);
 });
+
 // ーーーーーーーーーーーーーーーーーーーーーーーーーー
 
 function add(talk){
