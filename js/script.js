@@ -40,16 +40,17 @@ if(window.speechSynthesis.onvoiceschanged==null){
 
 function speech1(){
   const uttr = new SpeechSynthesisUtterance(document.getElementById("content").value);
-  uttr.rate=1.0;  // 話す速度 0.0(遅い)～1.0(標準)～2.0(速い)
-  uttr.pitch=3.0;  // ピッチ（声の高さ） 0.0(低め)～1.0(標準)～2.0(高め)
+  uttr.rate=0.8;  // 話す速度 0.0(遅い)～1.0(標準)～2.0(速い)
+  uttr.pitch=4.0;  // ピッチ（声の高さ） 0.0(低め)～1.0(標準)～2.0(高め)
   // お話が完了したときの関数
   uttr.onend=function(){
     if( confirm("保存しますか") ) {
       add();
       location.reload();
     }else {alert("削除しました");
-    li.remove(); // コメントを削除
+    $('#form').empty();
     saveData(); // 削除した状態でローカルストレージに保存
+    location.reload();
     } 
   }
   /*日本語の音声は、以下のような値から選べる。選ばない場合はデフォルト設定
