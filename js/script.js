@@ -44,8 +44,13 @@ function speech1(){
   uttr.pitch=3.0;  // ピッチ（声の高さ） 0.0(低め)～1.0(標準)～2.0(高め)
   // お話が完了したときの関数
   uttr.onend=function(){
-    //alert("お話終了");
-    add();
+    if( confirm("保存しますか") ) {
+      add();
+      location.reload();
+    }else {alert("削除しました");
+    li.remove(); // コメントを削除
+    saveData(); // 削除した状態でローカルストレージに保存
+    } 
   }
   /*日本語の音声は、以下のような値から選べる。選ばない場合はデフォルト設定
   uttr.voice=window.speechSynthesis.getVoices().filter(
@@ -79,13 +84,17 @@ function add(talk){
   if(talktext.length > 0){
     const li = document.createElement("li");
     li.innerText = talktext;
-    li.classList.add("list-group-item");
+    li.classList.add("#list-group-item");
     $(li).on("click", function() {
+      content.append(talktext);
+    });
+    $(li).on("contextmenu", function(event) {
+      event.preventDefault();
       if( confirm("削除しますか") ) {
         li.remove(); // コメントを削除
         saveData(); // 削除した状態でローカルストレージに保存
       }
-    })
+    });
     ul.appendChild(li);
     saveData();
   }
