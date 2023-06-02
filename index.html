@@ -4,47 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pallot Talk</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    
-    <button id="btn">話しかける</button>
-    <form id="form">
-        <textarea id="content"></textarea>
-    </form>
-    <input type="button" id="speech_button" value="えさをあげる"> 
-    <ul class="list-group" id="ul"></ul>
+    <div class="container">
+        <div class="side-menu">
+            <ul class="list-group" id="ul">
+                <h1 class="title1">ストックホルダー</h1>
+            </ul>
+        </div>
+        <div class="main-contents">
+            <div>
+                <p><img id="image" src="img/tori.JPG" alt="鳥の画像" class="tori"></p>
+            </div> 
+            <button id="btn">話しかける</button>
+            <form id="form">
+                <textarea id="content" placeholder="話しかけてエサを入れてください" class="talk-text"></textarea>
+            </form>
+            <input type="button" id="speech_button" value="エサをあげる"> 
+        </div>
 
-    <!-- <ul>
-        <input type="text" id="key">
-        <li id="save">Save</li>
-        <li id="clear">Clear</li>
-    </ul>
-    <table id="list"> -->
-
-    </table>
-
-<!-- 
-    <div class="parent">
-        <form name="MusicForm">
-          <select name="music" class="select_music">
-            <option value="おやすみDay">おやすみDay</option>
-            <option value="ぴよぴよサーキット">ぴよぴよサーキット</option>
-            <option value="海底の神殿">海底の神殿</option>
-          </select>
-        </form>
-        <form name="timer" id="timerform">
-          <input type="text" value="" class="min"><span>分</span>
-          <input type="text" value="" class="sec"><span>秒</span><br>
-          <input type="button" value="スタート" onclick="CountStart()" class="button">
-          <input type="button" value="ストップ" onclick="CountStop()" class="button">
-        </form>
-      </div> -->
-
-
-
+    </div>
 
    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

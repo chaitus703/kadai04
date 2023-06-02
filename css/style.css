@@ -1,115 +1,43 @@
 /*  */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.main-contents {
+width: 70%;
+padding: 10px;
+padding-right: 80px;
+}
+
+.side-menu {
+width: 20%;
+padding: 10px;
+}
 
 body {
     font-family: Arial, 'メイリオ', sans-serif;
     text-align: center;
-}
-#timerText {
-    color: #00aaff;
-    font-size: 148px;
-    margin: 30px auto;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: green;
 }
 
-p {
-    font-size: 20px;
+.tori{
+    height: 200px;
+    width: auto;
 }
-
-select {
-    font-size: 18px;
-    padding: 3px;
-}
-
-.btn{
-    margin-left: 5px;
-    display: inline-block;
-    font-weight: bold;
-    width: 60px;
-    padding: 0.5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 0 #CDC9C9;
-    background: #EEE9E9;
-    cursor: pointer;
-}
-
-.delete_btn {
-    margin-left: 15px;
-    font-weight: bold;
-    width: 60px;
-    padding: 3px;
-    border-radius: 5px;
-    background: #FF4500;
-    box-shadow: 0 2px 0 red;
-    cursor: pointer;
-    color: #fff;
-}
-
-.container {
-    text-align: left;
-    padding: 15px;
-    margin: 0 auto;
-    background: #e0e0e0;
-    width: 350px;
-    height: 190px;
-}
-.container p {
-    font-size: 16px;
-    margin: 5px;
-
-}
-
-.container li{
-    margin-bottom: 7px; 
-}
-
-
-
-/*  */
-.parent{
-    height: 300px;
-    width: 700px;
-    margin:100px;
-    background: #000000;
+::placeholder {
+    color: #DDDDDD;
   }
-  
-  .select_music{
-    margin:30px;
-    height: 40px;
-    width: 640px;
-  }
-  
-  .min{
-    margin:30px;
-    height: 40px;
-    width: 250px;
-    
-  }
-  span{
-    color: #fff;
-  }
-  .sec{
-    margin:30px;
-    height: 40px;
-    width: 250px;
-  }
-  
-  .button{
-    margin-top:15px;
-    margin-left:30px;
-    height: 50px;
-    width: 150px;
-  }
-  
-  #stop_music{
-    margin-top:15px;
-    margin-left:120px;
-    height: 50px;
-    width: 150px;
-  }
+.talk-text{
+    font-size: 24px;
+    font-weight:400;
+}
 
 
-  /*  */
 ul{
+    border: 1px solid #666;
     padding: 0;
     border-top: 1px solid #000000;
     display:table;  /* 定義 */
@@ -120,12 +48,20 @@ ul{
     text-align: center;
 }
 li{
-    list-style-type:none;
     border: 1px solid #666;
     background-color: #fff;
     cursor: pointer;
     color:#0d7dfd;
+    margin: 5px 5px 5px;
+    padding: 5px 5px 5px;
 }
+
+.title1{
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
 li:hover{
     background: #0d7dfd;
     color:#fff;
@@ -137,41 +73,4 @@ textarea{
   font-size:80%;
   box-shadow: 3px 3px 3px 3px #555;
   background-color:rgb(241, 239, 239);
-}
-#key{
-    margin:0 3%;
-    width: 95%;
-    font-size:80%;
-    background-color: #e1efff;
-    box-shadow: 3px 3px 3px 3px #555;
-}
-table{
-    margin: 20px 3%;
-    border:1px solid #8dc3f5;
-    width:96%;
-    
-}
-th{
-    width:30%;
-    font-size:24px;
-    background-color:#d0e7fc;
-    border-bottom: 1px solid #8dc3f5;
-}
-td{
-    font-size:16px;
-    background-color:rgb(241, 239, 239);
-    border-bottom: 1px solid #8dc3f5;
-}
-
-
-.delete-button {
-    display: none;
-    position: absolute;
-    top: 3%;
-    left: 85%;
-    opacity: 0.5;
-}
-
-.delete-button:hover {
-    opacity: 0.9;
 }
