@@ -4,6 +4,7 @@ speech.lang = 'ja-JP';
 const btn = document.getElementById('btn');
 const form = document.getElementById('form')
 const content = document.getElementById('content');
+const content1 = document.getElementById('content1');
 const talks = JSON.parse(localStorage.getItem("talks"));
 const ul = document.getElementById("ul");
 
@@ -41,7 +42,7 @@ if(window.speechSynthesis.onvoiceschanged==null){
 function speech1(){
   const uttr = new SpeechSynthesisUtterance(document.getElementById("content").value);
   uttr.rate=0.8;  // 話す速度 0.0(遅い)～1.0(標準)～2.0(速い)
-  uttr.pitch=4.0;  // ピッチ（声の高さ） 0.0(低め)～1.0(標準)～2.0(高め)
+  uttr.pitch=8.0;  // ピッチ（声の高さ） 0.0(低め)～1.0(標準)～2.0(高め)
   // お話が完了したときの関数
   uttr.onend=function(){
     if( confirm("保存しますか") ) {
@@ -68,7 +69,6 @@ function speech1(){
   // お話しする
   window.speechSynthesis.speak(uttr);
 }
-
 
 window.addEventListener("load",function(){
   //ボタンを押すと「speech」関数を呼び出す
@@ -116,4 +116,3 @@ if(talks){
     add(talk);
   })
 }
-

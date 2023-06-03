@@ -1,4 +1,30 @@
-/*  */
+body {
+    background-color: #253535;
+    text-align: center;
+  }
+
+  /*=============
+  .bg_pattern
+  ==============*/
+  
+  .bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #29623e;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  .Crown {
+    background-image: linear-gradient(45deg, #0e4521 25%, transparent 25%), linear-gradient(315deg, #2f4f4f 25%, #115b3c 25%);
+    background-position: 10px 0, 20px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+  }
+  
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -17,15 +43,10 @@ width: 20%;
 padding: 10px;
 }
 
-body {
-    font-family: Arial, 'メイリオ', sans-serif;
-    text-align: center;
-    background-color: green;
-}
-
 .tori{
     height: 200px;
     width: auto;
+    padding-top: 30px;
 }
 ::placeholder {
     color: #DDDDDD;
@@ -35,9 +56,16 @@ body {
     font-weight:400;
 }
 
+.list-group{
+    background-color: #29623e;
+    margin-top: 30px;
+    margin-left: 15px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
 
 ul{
-    border: 1px solid #666;
+    border: 2px solid #527958;
     padding: 0;
     border-top: 1px solid #000000;
     display:table;  /* 定義 */
@@ -46,12 +74,19 @@ ul{
     font-size: 80%;
     margin: 0 3%;
     text-align: center;
+    height: 375px;
+    overflow-y: scroll; /* 縦方向にスクロール可能にする */
+}
+.title1{
+    color: #bde3e3;
 }
 li{
-    border: 1px solid #666;
-    background-color: #fff;
+    border: 2px solid #774c00;
+    background-color: #ba8200;
     cursor: pointer;
-    color:#0d7dfd;
+    color:#451d00;
+    font-weight: bold;
+    border-radius: 5px;
     margin: 5px 5px 5px;
     padding: 5px 5px 5px;
 }
@@ -63,7 +98,8 @@ li{
 }
 
 li:hover{
-    background: #0d7dfd;
+    border: 2px solid #c48c2c;
+    background: #e6c066;
     color:#fff;
 }
 textarea{
@@ -73,4 +109,8 @@ textarea{
   font-size:80%;
   box-shadow: 3px 3px 3px 3px #555;
   background-color:rgb(241, 239, 239);
+  border-radius: 10px;
+}
+.btn{
+    cursor: pointer;
 }
